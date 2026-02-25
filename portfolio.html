@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kayart Media Company | Portfolio</title>
+  <meta name="description" content="Kayart Media Company portfolio – Weddings, Events, Designs." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -28,82 +29,50 @@
 
 <main class="container">
   <section class="section">
-    <h3>Our Work</h3>
-    <p>A sample of our photography, videography and creative projects.</p>
+    <h3>Portfolio</h3>
+    <p>Browse our work by category. Tap any image to view full size.</p>
 
-    <div class="grid">
-      <div class="card">
-        <img src="assets/photo1.jpg" style="width:100%;border-radius:14px">
-        <p>Event Photography</p>
-      </div>
-      <div class="card">
-  <img src="assets/photo10.jpg" style="width:100%; border-radius:14px;">
-  <p>Wedding Moments</p>
-</div>
-      <div class="card">
-  <img src="assets/photo11.jpg" style="width:100%; border-radius:14px;">
-  <p>Wedding Moments</p>
-</div>
-      <div class="card">
-  <img src="assets/photo12.jpg" style="width:100%; border-radius:14px;">
-  <p>Wedding Moments</p>
-</div>
-      <div class="card">
-  <img src="assets/photo13.jpg" style="width:100%; border-radius:14px;">
-  <p>Wedding Moments</p>
-</div>
-      <div class="card">
-  <img src="assets/photo14.jpg" style="width:100%; border-radius:14px;">
-  <p>Wedding Moments</p>
-</div>
-      <div class="card">
-  <img src="assets/photo15.jpg" style="width:100%; border-radius:14px;">
-  <p>Wedding Moments</p>
-</div>
-      <div class="card">
-  <img src="assets/photo16.jpg" style="width:100%; border-radius:14px;">
-  <p>Wedding Moments</p>
-</div>
-      <div class="card">
-  <img src="assets/photo17.jpg" style="width:100%; border-radius:14px;">
-  <p>Wedding Moments</p>
-</div>
-      <div class="card">
-  <img src="assets/photo18.jpg" style="width:100%; border-radius:14px;">
-  <p>Wedding Moments</p>
-</div>
-      <div class="card">
-  <img src="assets/photo19.jpg" style="width:100%; border-radius:14px;">
-  <p>Wedding Moments</p>
-</div>
-      <div class="card">
-  <img src="assets/photo20.jpg" style="width:100%; border-radius:14px;">
-  <p>Wedding Moments</p>
-</div>
-      <div class="card">
-  <img src="assets/photo21.jpg" style="width:100%; border-radius:14px;">
-  <p>Wedding Moments</p>
-</div>
-      <div class="card">
-  <img src="assets/photo22.jpg" style="width:100%; border-radius:14px;">
-  <p>Wedding Moments</p>
-</div>
-      <div class="card">
-  <img src="assets/photo23.jpg" style="width:100%; border-radius:14px;">
-  <p>Wedding Moments</p>
-</div>
-      <div class="card">
-        <img src="assets/photo2.jpg" style="width:100%;border-radius:14px">
-        <p>Studio Photography</p>
-      </div>
-      <div class="card">
-        <img src="assets/photo3.jpg" style="width:100%;border-radius:14px">
-        <p>Design & Branding</p>
-      </div>
-      <div class="card">
-        <img src="assets/photo4.jpg" style="width:100%;border-radius:14px">
-        <p>Live Streaming</p>
-      </div>
+    <!-- FILTER BUTTONS -->
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all" type="button">All</button>
+      <button class="filter-btn" data-filter="weddings" type="button">Weddings</button>
+      <button class="filter-btn" data-filter="events" type="button">Events</button>
+      <button class="filter-btn" data-filter="designs" type="button">Designs</button>
+    </div>
+
+    <!-- GALLERY GRID -->
+    <div class="gallery-grid" id="gallery">
+
+      <!-- EVENTS (rename your files to match or edit the src) -->
+      <a class="gallery-item" data-category="events" href="assets/photo1.jpg">
+        <img src="assets/photo1.jpg" alt="Event photo 1">
+        <div class="gallery-cap">Events</div>
+      </a>
+
+      <a class="gallery-item" data-category="events" href="assets/photo2.jpg">
+        <img src="assets/photo2.jpg" alt="Event photo 2">
+        <div class="gallery-cap">Events</div>
+      </a>
+
+      <!-- DESIGNS -->
+      <a class="gallery-item" data-category="designs" href="assets/photo3.jpg">
+        <img src="assets/photo3.jpg" alt="Design work 1">
+        <div class="gallery-cap">Designs</div>
+      </a>
+
+      <!-- WEDDINGS -->
+      <a class="gallery-item" data-category="weddings" href="assets/photo4.jpg">
+        <img src="assets/photo4.jpg" alt="Wedding photo 1">
+        <div class="gallery-cap">Weddings</div>
+      </a>
+
+      <!-- Add more items like this:
+      <a class="gallery-item" data-category="weddings" href="assets/wedding1.jpg">
+        <img src="assets/wedding1.jpg" alt="Wedding photo 2">
+        <div class="gallery-cap">Weddings</div>
+      </a>
+      -->
+
     </div>
   </section>
 
@@ -111,6 +80,12 @@
     © <span id="year"></span> Kayart Media Company
   </footer>
 </main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close">×</button>
+  <img class="lightbox-img" id="lightboxImg" alt="Full image view">
+</div>
 
 <script src="script.js"></script>
 </body>
