@@ -1,62 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kayart Media Company | Contact</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Kayart Media Company</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html">
-<img class="page-logo" src="assets/logo.jpg" alt="Kayart Media Logo">
-          <div>
-        <h1>Kayart Media Company</h1>
-        <small>Content • Ads • Design • Events</small>
+  <header>
+    <nav class="navbar">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/logo.jpg" alt="Kayart Media Logo">
+        <span class="brand-name">Kayart Media Company</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="gallery.html">Gallery</a>
+        <a class="active" href="contact.html">Contact</a>
       </div>
-    </a>
-    <nav class="links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<main class="container">
-  <section class="section">
-    <h3>Contact & Booking</h3>
-    <p>Reach out for bookings, pricing and consultations.</p>
+  <main class="container">
 
-    <div class="grid">
-      <div class="card">
-        <h4>Phone</h4>
-        <p>+260 977 149 151</p>
+    <section class="hero">
+      <span class="kicker">Let’s Talk</span>
+      <h1>Contact Us</h1>
+      <p class="lead">
+        Ready to book or ask a question? Send us a message and we’ll respond ASAP.
+      </p>
+
+      <div class="btns">
+        <a class="btn primary" href="https://wa.me/260XXXXXXXXX" target="_blank">WhatsApp Us</a>
+        <a class="btn ghost" href="tel:+260XXXXXXXXX">Call Now</a>
       </div>
+      <p class="lead" style="margin-top:10px; font-size:13px;">
+        Replace the number above with your real WhatsApp/Call number.
+      </p>
+    </section>
+
+    <section class="cards">
       <div class="card">
-        <h4>Email</h4>
-        <p>gkasosa@gmail.com</p>
+        <h3>Phone</h3>
+        <p>+260 XXX XXX XXX</p>
       </div>
+
       <div class="card">
-        <h4>WhatsApp</h4>
-        <p>Fastest response</p>
+        <h3>Email</h3>
+        <p>youremail@example.com</p>
       </div>
-    </div>
 
-    <div class="btn-row" style="margin-top:18px;">
-      <a class="btn btn-primary" href="tel:+260977149151">Call Now</a>
-      <a class="btn" href="https://wa.me/260977149151" target="_blank">WhatsApp Us</a>
-    </div>
-  </section>
+      <div class="card">
+        <h3>Location</h3>
+        <p>Lusaka, Zambia</p>
+      </div>
+    </section>
 
-  <footer class="footer">
-    © <span id="year"></span> Kayart Media Company
-  </footer>
-</main>
+  </main>
 
-<script src="script.js"></script>
+  <!-- Floating WhatsApp Button -->
+  <a
+    href="https://wa.me/260XXXXXXXXX"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Chat with us on WhatsApp"
+  >
+    💬
+  </a>
+
 </body>
 </html>
