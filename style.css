@@ -355,3 +355,54 @@ a { color: inherit; }
 @media (max-width: 768px) {
   .whatsapp-float { display: flex; }
 }
+/* ===== Navbar tabs: floating + animated ===== */
+.nav-links a{
+  position: relative;
+  display: inline-block;
+  will-change: transform;
+  transition: transform .18s ease, background .18s ease, box-shadow .18s ease, color .18s ease;
+}
+
+.nav-links a:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.22);
+}
+
+/* active tab gets a stronger "floating" look */
+.nav-links a.active{
+  box-shadow: 0 10px 24px rgba(0,0,0,.28);
+  transform: translateY(-1px);
+}
+
+/* subtle animated shine line under tabs */
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 7px;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.55);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .18s ease;
+  opacity: .9;
+}
+
+.nav-links a:hover::after{
+  transform: scaleX(1);
+}
+
+/* active tab underline visible */
+.nav-links a.active::after{
+  background: rgba(15,23,42,.65);
+  transform: scaleX(1);
+}
+
+/* optional: navbar entrance animation */
+@keyframes navDrop {
+  from { transform: translateY(-8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.navbar{ animation: navDrop .28s ease both; }
