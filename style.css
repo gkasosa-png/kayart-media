@@ -406,3 +406,27 @@ a { color: inherit; }
   to { transform: translateY(0); opacity: 1; }
 }
 .navbar{ animation: navDrop .28s ease both; }
+/* ===== Kicker line (logo color blend) ===== */
+.kicker-wrap{
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.kicker-line{
+  width: 170px;
+  height: 4px;
+  border-radius: 999px;
+
+  /* Change these colors to match your logo */
+  background: linear-gradient(90deg, #ffffff 0%, #25D366 35%, #0f172a 70%, #ffffff 100%);
+
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+  animation: lineGlow 1.6s ease-in-out infinite;
+}
+
+@keyframes lineGlow{
+  0%,100% { filter: brightness(1); transform: translateY(0); }
+  50% { filter: brightness(1.25); transform: translateY(-1px); }
+}
