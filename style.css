@@ -247,3 +247,10 @@ a { color: inherit; }
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 14px 30px rgba(0,0,0,.35);
 }
+.page-logo{
+  width: 180px;
+  max-width: 60vw;
+  height: auto;
+  border-radius: 18px;
+  display: block;
+}
