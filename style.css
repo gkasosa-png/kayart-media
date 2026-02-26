@@ -317,3 +317,8 @@ a { color: inherit; }
 @media (max-width: 768px){
   .whatsapp-float{ display:flex; }
 }
+.whatsapp-icon{
+  width: 28px;
+  height: 28px;
+  display: block;
+}
