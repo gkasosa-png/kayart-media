@@ -36,61 +36,95 @@
     </div>
 
     <section class="grid" id="galleryGrid">
-      <!-- WEDDINGS -->
+
+      <!-- ================= WEDDINGS ================= -->
       <figure class="tile" data-category="weddings">
-        <img src="assets/wedding photos.jpg" alt="Wedding photo 1">
+        <img src="assets/photo9.jpg" alt="Wedding photo 1">
         <figcaption>Wedding Coverage</figcaption>
       </figure>
 
       <figure class="tile" data-category="weddings">
-        <img src="assets/wedding photos (2).jpg" alt="Wedding photo 2">
+        <img src="assets/photo4.jpg" alt="Wedding photo 2">
         <figcaption>Wedding Moments</figcaption>
       </figure>
 
       <figure class="tile" data-category="weddings">
-        <img src="assets/wedding photos (3).jpg" alt="Wedding photo 3">
+        <img src="assets/photo5.jpg" alt="Wedding photo 3">
         <figcaption>Wedding Highlights</figcaption>
       </figure>
 
-      <!-- EVENTS -->
+      <figure class="tile" data-category="weddings">
+        <img src="assets/photo6.jpg" alt="Wedding photo 4">
+        <figcaption>Couple Moments</figcaption>
+      </figure>
+
+      <figure class="tile" data-category="weddings">
+        <img src="assets/photo7.jpg" alt="Wedding photo 5">
+        <figcaption>Wedding Vibes</figcaption>
+      </figure>
+
+      <figure class="tile" data-category="weddings">
+        <img src="assets/photo8.jpg" alt="Wedding photo 6">
+        <figcaption>Wedding Highlights</figcaption>
+      </figure>
+
+      <!-- ================= EVENTS ================= -->
       <figure class="tile" data-category="events">
-        <img src="assets/event photos.jpg" alt="Event photo 1">
+        <img src="assets/photo3.jpg" alt="Event photo 1">
         <figcaption>Event Coverage</figcaption>
       </figure>
 
       <figure class="tile" data-category="events">
-        <img src="assets/event photos (2).jpg" alt="Event photo 2">
+        <img src="assets/photo1.jpg" alt="Event photo 2">
         <figcaption>Live Moments</figcaption>
       </figure>
 
       <figure class="tile" data-category="events">
-        <img src="assets/event photos (3).jpg" alt="Event photo 3">
+        <img src="assets/photo2.jpg" alt="Event photo 3">
         <figcaption>Event Highlights</figcaption>
       </figure>
 
-      <!-- DESIGNS (swap these with your actual design images later) -->
+      <!-- ================= DESIGNS ================= -->
       <figure class="tile" data-category="designs">
-        <img src="assets/photo1.jpg" alt="Design 1">
+        <img src="assets/photo14.jpg" alt="Design 1">
         <figcaption>Design Concept</figcaption>
       </figure>
 
       <figure class="tile" data-category="designs">
-        <img src="assets/photo2.jpg" alt="Design 2">
+        <img src="assets/photo15.jpg" alt="Design 2">
         <figcaption>Social Media Creative</figcaption>
       </figure>
 
       <figure class="tile" data-category="designs">
-        <img src="assets/photo3.jpg" alt="Design 3">
+        <img src="assets/photo16.jpg" alt="Design 3">
         <figcaption>Poster / Flyer</figcaption>
       </figure>
+
+      <figure class="tile" data-category="designs">
+        <img src="assets/photo17.jpg" alt="Design 4">
+        <figcaption>Brand Visual</figcaption>
+      </figure>
+
+      <figure class="tile" data-category="designs">
+        <img src="assets/photo18.jpg" alt="Design 5">
+        <figcaption>Creative Layout</figcaption>
+      </figure>
+
+      <figure class="tile" data-category="designs">
+        <img src="assets/photo19.jpg" alt="Design 6">
+        <figcaption>Marketing Creative</figcaption>
+      </figure>
+
     </section>
   </main>
 
   <!-- MODAL -->
   <div class="modal" id="imgModal" aria-hidden="true">
     <button class="modal-close" id="modalClose" aria-label="Close">×</button>
-    <img class="modal-img" id="modalImg" alt="">
-    <p class="modal-caption" id="modalCaption"></p>
+    <div class="modal-wrap">
+      <img class="modal-img" id="modalImg" alt="">
+      <p class="modal-caption" id="modalCaption"></p>
+    </div>
   </div>
 
   <script>
@@ -122,7 +156,7 @@
         const img = tile.querySelector("img");
         const caption = tile.querySelector("figcaption")?.innerText || "";
 
-        modalImg.src = img.src;
+        modalImg.src = img.getAttribute("src");
         modalImg.alt = img.alt || "Gallery image";
         modalCaption.textContent = caption;
 
