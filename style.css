@@ -460,3 +460,38 @@ a { color: inherit; }
   color: #0f172a !important;
   border-color: rgba(255,255,255,.35);
 }
+/* ===== Moving logo-color line (end-to-end motion) ===== */
+.kicker-wrap{
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.kicker-line{
+  width: 220px;
+  height: 4px;
+  border-radius: 999px;
+  overflow: hidden;
+
+  /* Logo-inspired colors: red, purple, yellow, white on dark */
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #e53935 18%,
+    #6a1b9a 45%,
+    #fdd835 70%,
+    #ffffff 100%
+  );
+
+  /* make the gradient “travel” */
+  background-size: 300% 100%;
+  animation: moveLine 1.6s linear infinite;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,.14);
+}
+
+@keyframes moveLine{
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
