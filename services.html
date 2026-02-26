@@ -3,52 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Portfolio | Kayart Media Company</title>
 
-<meta name="description" content="View the portfolio of Kayart Media Company featuring photography, videography, branding, events and creative projects completed in Zambia.">
+  <title>Services | Kayart Media Company</title>
 
-<meta name="keywords" content="media portfolio Zambia, photography portfolio Lusaka, videography work Zambia">
+  <meta name="description" content="Kayart Media Company services include photography, videography, live streaming, event coverage, creative design and wedding choreography in Zambia.">
+  <meta name="author" content="Kayart Media Company">
 
-<meta name="author" content="Kayart Media Company">
+  <meta property="og:title" content="Services | Kayart Media Company">
+  <meta property="og:description" content="Photography, videography, events, live streaming and creative design services in Zambia.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gkasosa-png.github.io/kayart-media/services.html">
+  <meta property="og:image" content="https://gkasosa-png.github.io/kayart-media/assets/logo.jpg">
 
-<meta property="og:title" content="Portfolio | Kayart Media Company">
-<meta property="og:description" content="A showcase of our photography, videography and creative work in Zambia.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://gkasosa-png.github.io/kayart-media/portfolio.html">
-<meta property="og:image" content="https://gkasosa-png.github.io/kayart-media/assets/logo.jpg">
-
-<meta name="description" content="View the portfolio of Kayart Media Company featuring photography, videography, branding, events and creative projects completed in Zambia.">
-
-<meta name="keywords" content="media portfolio Zambia, photography portfolio Lusaka, videography work Zambia">
-
-<meta name="author" content="Kayart Media Company">
-
-<meta property="og:title" content="Portfolio | Kayart Media Company">
-<meta property="og:description" content="A showcase of our photography, videography and creative work in Zambia.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://gkasosa-png.github.io/kayart-media/portfolio.html">
-<meta property="og:image" content="https://gkasosa-png.github.io/kayart-media/assets/logo.jpg">
-
-<meta name="description" content="Explore Kayart Media Company services including photography, videography, live streaming, event coverage, creative design and wedding choreography in Zambia.">
-
-<meta name="keywords" content="media services Zambia, photography services Lusaka, videography Zambia, event planning Zambia">
-
-<meta name="author" content="Kayart Media Company">
-
-<meta property="og:title" content="Our Services | Kayart Media Company">
-<meta property="og:description" content="Professional photography, videography, event coverage and creative services in Zambia.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://gkasosa-png.github.io/kayart-media/services.html">
-<meta property="og:image" content="https://gkasosa-png.github.io/kayart-media/assets/logo.jpg">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header>
     <nav class="navbar">
-      <a class="brand" href="index.html">Kayart Media</a>
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/logo.jpg" alt="Kayart Media Logo">
+        <span class="brand-name">Kayart Media Company</span>
+      </a>
+
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a class="active" href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -56,28 +37,62 @@
   </header>
 
   <main class="container">
-    <h1>Our Services</h1>
-    <p class="lead">
-      We create clean, premium visuals that make your moments and your brand feel bigger.
-    </p>
+    <section class="hero">
+      <span class="kicker">What We Do</span>
+      <h1>Our Services</h1>
+      <p class="lead">
+        We deliver premium visuals and creative solutions for brands, individuals, and events.
+      </p>
+
+      <div class="btns">
+        <a class="btn primary" href="https://wa.me/260977149151?text=Hi%20Kayart%20Media,%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener">WhatsApp Us</a>
+        <a class="btn ghost" href="gallery.html">See Our Work</a>
+      </div>
+    </section>
 
     <section class="cards">
       <div class="card">
-        <h3>Weddings</h3>
-        <p>Full coverage, highlights, reels, and cinematic edits.</p>
+        <h3>Photography</h3>
+        <p>Weddings, portraits, corporate shoots, lifestyle and brand photography.</p>
       </div>
 
       <div class="card">
-        <h3>Events</h3>
-        <p>Corporate events, parties, launches, birthdays, graduations.</p>
+        <h3>Videography</h3>
+        <p>Promotional videos, music visuals, reels, highlights and cinematic edits.</p>
       </div>
 
       <div class="card">
-        <h3>Designs</h3>
-        <p>Posters, flyers, branding, social media creatives.</p>
+        <h3>Events Coverage</h3>
+        <p>Full event coverage for conferences, parties, launches, graduations and more.</p>
+      </div>
+
+      <div class="card">
+        <h3>Live Streaming</h3>
+        <p>Professional live streaming setup for events, services, and corporate sessions.</p>
+      </div>
+
+      <div class="card">
+        <h3>Creative Design</h3>
+        <p>Posters, flyers, branding, logos and social media creatives.</p>
+      </div>
+
+      <div class="card">
+        <h3>Wedding Choreography</h3>
+        <p>Beautiful choreography planned to match your style, theme and music.</p>
       </div>
     </section>
   </main>
+
+  <!-- Floating WhatsApp Button (Mobile Only) -->
+  <a
+    href="https://wa.me/260977149151?text=Hi%20Kayart%20Media,%20I%E2%80%99m%20interested%20in%20your%20services."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with us on WhatsApp"
+  >
+    <img src="assets/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+  </a>
 
 </body>
 </html>
