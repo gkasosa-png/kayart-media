@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Kayart Media</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a class="brand" href="index.html">Kayart Media</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a class="active" href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="gallery-head">
+      <div>
+        <h1>Our Gallery</h1>
+        <p class="lead">Weddings, Events, and Designs — curated highlights of our work.</p>
+      </div>
+
+      <div class="gallery-controls">
+        <button class="tab active" data-filter="all">All</button>
+        <button class="tab" data-filter="weddings">Weddings</button>
+        <button class="tab" data-filter="events">Events</button>
+        <button class="tab" data-filter="designs">Designs</button>
+      </div>
+    </div>
+
+    <section class="grid" id="galleryGrid">
+      <!-- WEDDINGS -->
+      <figure class="tile" data-category="weddings">
+        <img src="assets/wedding photos.jpg" alt="Wedding photo 1">
+        <figcaption>Wedding Coverage</figcaption>
+      </figure>
+
+      <figure class="tile" data-category="weddings">
+        <img src="assets/wedding photos (2).jpg" alt="Wedding photo 2">
+        <figcaption>Wedding Moments</figcaption>
+      </figure>
+
+      <figure class="tile" data-category="weddings">
+        <img src="assets/wedding photos (3).jpg" alt="Wedding photo 3">
+        <figcaption>Wedding Highlights</figcaption>
+      </figure>
+
+      <!-- EVENTS -->
+      <figure class="tile" data-category="events">
+        <img src="assets/event photos.jpg" alt="Event photo 1">
+        <figcaption>Event Coverage</figcaption>
+      </figure>
+
+      <figure class="tile" data-category="events">
+        <img src="assets/event photos (2).jpg" alt="Event photo 2">
+        <figcaption>Live Moments</figcaption>
+      </figure>
+
+      <figure class="tile" data-category="events">
+        <img src="assets/event photos (3).jpg" alt="Event photo 3">
+        <figcaption>Event Highlights</figcaption>
+      </figure>
+
+      <!-- DESIGNS (swap these with your actual design images later) -->
+      <figure class="tile" data-category="designs">
+        <img src="assets/photo1.jpg" alt="Design 1">
+        <figcaption>Design Concept</figcaption>
+      </figure>
+
+      <figure class="tile" data-category="designs">
+        <img src="assets/photo2.jpg" alt="Design 2">
+        <figcaption>Social Media Creative</figcaption>
+      </figure>
+
+      <figure class="tile" data-category="designs">
+        <img src="assets/photo3.jpg" alt="Design 3">
+        <figcaption>Poster / Flyer</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <!-- MODAL -->
+  <div class="modal" id="imgModal" aria-hidden="true">
+    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+    <img class="modal-img" id="modalImg" alt="">
+    <p class="modal-caption" id="modalCaption"></p>
+  </div>
+
+  <script>
+    // Tabs filter
+    const tabs = document.querySelectorAll(".tab");
+    const tiles = document.querySelectorAll(".tile");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        const filter = tab.dataset.filter;
+        tiles.forEach(tile => {
+          const cat = tile.dataset.category;
+          tile.style.display = (filter === "all" || cat === filter) ? "block" : "none";
+        });
+      });
+    });
+
+    // Modal open
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalCaption = document.getElementById("modalCaption");
+    const modalClose = document.getElementById("modalClose");
+
+    tiles.forEach(tile => {
+      tile.addEventListener("click", () => {
+        const img = tile.querySelector("img");
+        const caption = tile.querySelector("figcaption")?.innerText || "";
+
+        modalImg.src = img.src;
+        modalImg.alt = img.alt || "Gallery image";
+        modalCaption.textContent = caption;
+
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      modalImg.src = "";
+    }
+
+    modalClose.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+  </script>
+
+</body>
+</html>
