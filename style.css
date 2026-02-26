@@ -254,3 +254,15 @@ a { color: inherit; }
   border-radius: 18px;
   display: block;
 }
+/* Safety: never allow a huge logo in the navbar */
+.navbar .brand img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+}
+/* Safety: never allow a huge logo in the navbar */
+.navbar .brand img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+}
