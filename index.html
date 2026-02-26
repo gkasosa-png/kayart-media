@@ -1,96 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kayart Media Company | Home</title>
-  <meta name="description" content="Kayart Media Company – Content Creation, Photography, Videography, Live Streaming, Wedding Choreography and Event Planning in Zambia." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kayart Media Company</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html">
-      <img src="assets/logo.jpg" alt="Kayart Media Company Logo" class="logo-img">
-      <div>
-        <h1>Kayart Media Company</h1>
-        <small>Content • Ads • Design • Events</small>
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header>
+    <nav class="navbar">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/logo.jpg" alt="Kayart Media Logo">
+        <span class="brand-name">Kayart Media Company</span>
+      </a>
+
+      <div class="nav-links">
+        <a class="active" href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
       </div>
-    </a>
-
-    <nav class="links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
     </nav>
-    <a href="gallery.html">Gallery</a>
-  </div>
-</header>
+  </header>
 
-<main class="container">
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container">
 
-  <section class="hero">
-    <div>
-      <div class="badge"><span class="dot"></span> 11K Followers • Trusted Creative Team</div>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <span class="kicker">11K Followers • Trusted Creative Team</span>
 
-      <h2>We make your brand look serious and professional.</h2>
+      <h1>We make your brand look serious and professional.</h1>
 
-      <p>
+      <p class="lead">
         Kayart Media Company provides high-quality content creation, photography,
-        videography, live streaming, wedding choreography and full event planning.
-        We help brands, individuals and organisations stand out.
+        videography, live streaming, wedding choreography, and full event planning.
+        We help brands, individuals, and organisations stand out.
       </p>
 
-      <div class="btn-row">
-        <a class="btn btn-primary" href="tel:+260977149151">Call Now</a>
-        <a class="btn" href="services.html">Our Services</a>
-        <a class="btn" href="portfolio.html">View Portfolio</a>
+      <div class="btns">
+        <a class="btn primary" href="contact.html">Call Now</a>
+        <a class="btn ghost" href="services.html">Our Services</a>
+        <a class="btn ghost" href="gallery.html">View Gallery</a>
       </div>
-    </div>
+    </section>
 
-    <aside class="card">
-      <h3>Why Choose Us</h3>
-      <ul style="color:var(--muted); font-weight:700;">
-        <li>Professional & clean output</li>
-        <li>Fast communication</li>
-        <li>Affordable packages</li>
-        <li>One team for all media needs</li>
-      </ul>
-    </aside>
-  </section>
+    <!-- WHY CHOOSE US -->
+    <section class="cards">
+      <div class="card">
+        <h3>Professional & Clean Output</h3>
+        <p>Sharp visuals, clean edits, and premium-quality delivery.</p>
+      </div>
 
-  <section class="section">
-    <h3>Our Core Services</h3>
+      <div class="card">
+        <h3>Fast Turnaround</h3>
+        <p>We respect deadlines and deliver on time without compromising quality.</p>
+      </div>
 
-    <div class="grid">
-      <div class="card">Content Creation & Online Advertising</div>
-      <div class="card">Photography & Studio Photography</div>
-      <div class="card">Videography & Event Coverage</div>
-      <div class="card">Live Online Streaming</div>
-      <div class="card">Wedding Choreography</div>
-      <div class="card">Event Planning & Coordination</div>
-    </div>
-  </section>
+      <div class="card">
+        <h3>Creative Direction</h3>
+        <p>We guide your ideas from concept to a polished final product.</p>
+      </div>
+    </section>
 
-  <footer class="footer">
-    © <span id="year"></span> Kayart Media Company • Lusaka, Zambia
-  </footer>
+  </main>
 
-</main>
-
-<a class="whatsapp"
-   href="https://wa.me/260977149151"
-   target="_blank" rel="noopener">
-  <span class="wa-dot"></span>
-  <div>
-    <span>WhatsApp Us</span>
-    <small>+260 977 149 151</small>
-  </div>
-</a>
-
-<script src="script.js"></script>
 </body>
 </html>
